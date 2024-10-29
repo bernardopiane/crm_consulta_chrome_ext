@@ -1,0 +1,29 @@
+{
+    "manifest_version": 3,
+    "name": "Consulta CRM",
+    "version": "1.0",
+    "description": "Consulta CRM utilizando o Sistema CREMERJ",
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icon16.png",
+            "48": "icon48.png",
+            "128": "icon128.png"
+        }
+    },
+    "permissions": [
+        "declarativeNetRequest"
+    ],
+    "host_permissions": [
+        "https://sistemacremerj.com.br/*"
+    ],
+    "declarative_net_request": {
+        "rule_resources": [
+            {
+                "id": "ruleset",
+                "enabled": true,
+                "path": "rules.json"
+            }
+        ]
+    }
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Enter Details</title>
+    <style>
+        body {
+            width: 200px;
+            font-family: Arial, sans-serif;
+            padding: 10px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0 4px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 10px;
+            padding: 6px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Enter Details</h3>
+    <label for="name">Nome do Médico:</label>
+    <input type="text" id="name" placeholder="Nome">
+
+    <label for="number">CRM:</label>
+    <input type="text" id="crm" placeholder="00-123456-7">
+
+    <button id="submit">Submit</button>
+
+    <div id="result">
+        <div class="result" id="name-result">
+
+        </div>
+        <div class="result" id="crm-result"></div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
