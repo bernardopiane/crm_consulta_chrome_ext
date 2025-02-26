@@ -1,3 +1,3 @@
 $(document).ready(function () {
-    $("#crm").inputmask("99-999999-9");
+    $("#crm").inputmask("99-99999-9");
 });
