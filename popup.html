@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Enter Details</title>
     <style>
         body {
@@ -37,13 +40,25 @@
     </style>
 </head>
 
+
 <body>
     <h3>Enter Details</h3>
     <label for="name">Nome do Médico:</label>
     <input type="text" id="name" placeholder="Nome">
 
     <label for="number">CRM:</label>
+
+
+    <script src="./jquery-3.7.1.min.js"></script>
+    <script src="./jquery.inputmask.js"></script>
+
     <input type="text" id="crm" placeholder="00-123456-7">
+
+    <script>
+        $(document).ready(function () {
+            $("#crm").inputmask("99-999999-9"); // Define the mask pattern
+        });
+    </script>
 
     <button id="submit">Submit</button>
 
