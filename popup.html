@@ -1,73 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Enter Details</title>
     <style>
         body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
             width: 200px;
-            font-family: Arial, sans-serif;
-            padding: 10px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 300px;
+        }
+
+        h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
         }
 
         label {
+            font-size: 14px;
+            font-weight: bold;
             display: block;
-            margin: 8px 0 4px;
+            margin-bottom: 5px;
+            color: #555;
         }
 
-        input[type="text"] {
+        input {
             width: 100%;
-            padding: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
             box-sizing: border-box;
         }
 
         button {
             width: 100%;
-            margin-top: 10px;
-            padding: 6px;
-            background-color: #4CAF50;
+            padding: 10px;
+            background-color: #007BFF;
             color: white;
             border: none;
+            border-radius: 5px;
+            font-size: 16px;
             cursor: pointer;
+            transition: background 0.3s;
         }
 
         button:hover {
-            background-color: #45a049;
+            background-color: #0056b3;
+        }
+
+        .result {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #333;
         }
     </style>
 </head>
 
-
 <body>
-    <h3>Enter Details</h3>
-    <label for="name">Nome do Médico:</label>
-    <input type="text" id="name" placeholder="Nome">
+    <div class="container">
+        <h3>Enter Details</h3>
+        <label for="name">Nome do Médico:</label>
+        <input type="text" id="name" placeholder="Nome">
 
-    <label for="number">CRM:</label>
+        <label for="crm">CRM:</label>
+        <input type="text" id="crm" placeholder="00-123456-7">
 
+        <button id="submit">Submit</button>
+
+        <div id="result">
+            <div class="result" id="name-result"></div>
+            <div class="result" id="crm-result"></div>
+        </div>
+    </div>
 
     <script src="./jquery-3.7.1.min.js"></script>
     <script src="./jquery.inputmask.js"></script>
+    <script src="./initlize.js"></script>
 
-    <input type="text" id="crm" placeholder="00-123456-7">
 
-    <script>
-        $(document).ready(function () {
-            $("#crm").inputmask("99-999999-9"); // Define the mask pattern
-        });
-    </script>
-
-    <button id="submit">Submit</button>
-
-    <div id="result">
-        <div class="result" id="name-result">
-
-        </div>
-        <div class="result" id="crm-result"></div>
-    </div>
 
     <script src="popup.js"></script>
 </body>
